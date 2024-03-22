@@ -2,29 +2,20 @@ import Link from "next/link";
 import { products } from "../../../contants";
 import Image from "next/image";
 import { khung } from "../../../public";
+import { formatCurrency } from "../components/helper";
 
 const Section5 = () => {
-  function formatCurrency(value) {
-    if (value === undefined || value === null) {
-      return ""; // hoặc bạn có thể trả về giá trị mặc định khác tùy ý
-    }
-    const formattedValue = value
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    return `${formattedValue}đ`;
-  }
-
   const pansSection = products.filter(
-    (products) => products.catagories === "pans"
+    (products) => products.categories === "pans"
   );
   const knifiesSection = products.filter(
-    (products) => products.catagories === "knifies"
+    (products) => products.categories === "knifies"
   );
   const cupsSection = products.filter(
-    (products) => products.catagories === "cups"
+    (products) => products.categories === "cups"
   );
   const accessorySection = products.filter(
-    (products) => products.catagories === "accessory"
+    (products) => products.categories === "accessory"
   );
   return (
     <>

@@ -33,6 +33,16 @@ import coupon1 from "./coupon1.webp";
 import coupon2 from "./coupon2.webp";
 import coupon3 from "./coupon3.webp";
 import coupon4 from "./coupon4.webp";
+import breadcrumb from "./breadcrumb.webp";
+import footter from "./footer.jpg";
+import shopee from "./shopee.webp";
+import sendo from "./sendo.webp";
+import laz from "./lazada.webp";
+import tiki from "./tiki.webp";
+import fb from "./facebook.webp";
+import gg from "./google.webp";
+import yt from "./youtube.webp";
+import zl from "./zalo.webp";
 
 export {
   logo,
@@ -70,4 +80,14 @@ export {
   coupon2,
   coupon3,
   coupon4,
+  breadcrumb,
+  footter,
+  shopee,
+  zl,
+  yt,
+  fb,
+  gg,
+  laz,
+  tiki,
+  sendo,
 };

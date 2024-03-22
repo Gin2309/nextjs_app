@@ -1,18 +1,10 @@
 import { products } from "../../../contants";
 import Image from "next/image";
 import { khung, coupon1, coupon2, coupon3, coupon4 } from "../../../public";
+import Link from "next/link";
+import { formatCurrency } from "../components/helper";
 
 export default function Deal() {
-  function formatCurrency(value) {
-    if (value === undefined || value === null) {
-      return "";
-    }
-    const formattedValue = value
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    return `${formattedValue}đ`;
-  }
-
   const saleProducst = products.filter((products) => products.tag === "sale");
 
   return (
@@ -25,7 +17,8 @@ export default function Deal() {
               <div className="flex">
                 {saleProducst.map((item) => {
                   return (
-                    <div
+                    <Link
+                      href={`/products/${item.id}`}
                       key={item.id}
                       className="bg-[#fff] rounded-[5px] border-[1px] border-solid border-[#ddd] mr-[10px] w-[222px]"
                     >
@@ -54,7 +47,7 @@ export default function Deal() {
                           </span>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
@@ -64,12 +57,12 @@ export default function Deal() {
                 </button>
               </div>
             </div>
-            <div className="mx-[10px]">
+            <div>
               <div className="border-[2px] border-solid border-[#dd0115] flex bg-[#fff] rounded-[5px] mb-[10px]">
                 <Image
                   src={coupon1}
                   alt="coupon"
-                  className="w-[58px] p-[8px] border-solid border-[#dd0115] h border-r-[1px]"
+                  className="w-[50px] p-[8px] border-solid border-[#dd0115] border-r-[1px]"
                 />
                 <div className="text-[12px] p-[5px]">
                   <h3>DOLA10</h3>
@@ -83,7 +76,7 @@ export default function Deal() {
                 <Image
                   src={coupon2}
                   alt="coupon"
-                  className="w-[58px] p-[8px] border-solid border-[#dd0115] h border-r-[1px]"
+                  className="w-[50px] p-[8px] border-solid border-[#dd0115] h border-r-[1px]"
                 />
                 <div className="text-[12px] p-[5px]">
                   <h3>FREESHIP</h3>
@@ -97,7 +90,7 @@ export default function Deal() {
                 <Image
                   src={coupon3}
                   alt="coupon"
-                  className="w-[58px] p-[8px] border-solid border-[#dd0115] h border-r-[1px]"
+                  className="w-[50px] p-[8px] border-solid border-[#dd0115] h border-r-[1px]"
                 />
                 <div className="text-[12px] p-[5px]">
                   <h3>DOLA20</h3>
@@ -111,7 +104,7 @@ export default function Deal() {
                 <Image
                   src={coupon4}
                   alt="coupon"
-                  className="w-[58px] p-[8px] border-solid border-[#dd0115] h border-r-[1px]"
+                  className="w-[50px] p-[8px] border-solid border-[#dd0115] h border-r-[1px]"
                 />
                 <div className="text-[12px] p-[5px]">
                   <h3>DOLA50</h3>

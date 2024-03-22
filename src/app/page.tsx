@@ -43,13 +43,13 @@ export default function Page() {
               <li className="py-[10px] pr-[35px] pl-[40px] hover:bg-[#FFB416] hover:text-[#FFF]">
                 Dụng Cụ Làm Bánh
               </li>
-              <li className="py-[10px] pr-[35px] pl-[40px] hover:bg-[#FFB416] ">
+              <li className="py-[10px] pr-[35px] pl-[40px] hover:bg-[#FFB416] hover:text-[#FFF]">
                 Ly, Tách, Decanter
               </li>
-              <li className="py-[10px] pr-[35px] pl-[40px] hover:bg-[#FFB416] ">
+              <li className="py-[10px] pr-[35px] pl-[40px] hover:bg-[#FFB416] hover:text-[#FFF]">
                 Bình, Ly Giữ Nhiệt
               </li>
-              <li className="py-[10px] pr-[35px] pl-[40px] hover:bg-[#FFB416] ">
+              <li className="py-[10px] pr-[35px] pl-[40px] hover:bg-[#FFB416] hover:text-[#FFF]">
                 Hộp Đựng Cơm
               </li>
             </ul>
@@ -95,7 +95,9 @@ export default function Page() {
             <div className="pl-[10px] w-[80%]">
               <h3 className="font-bold">Đổi trả dễ dàng</h3>
               <p className="text-[14px]">
-                Đổi ngay trong ngày nếu như bánh không đúng yêu cầu
+                Đổi ngay trong ngày nếu như bánh không đúng
+                <br />
+                yêu cầu
               </p>
             </div>
           </div>
@@ -310,7 +312,7 @@ export default function Page() {
 
         <Section5 />
         {/* sec tion 6 */}
-        <div className="flex">
+        <div className="flex mb-[20px]">
           <Image src={sale1} alt="Sale" className="px-[15px] w-[50%]" />
           <Image src={sale2} alt="Sale" className="px-[15px] w-[50%]" />
         </div>
